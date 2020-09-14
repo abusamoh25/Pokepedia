@@ -88,3 +88,15 @@ body {
   .fairy {
     background: #F9AEFF;
   }
+
+  .type {
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    width: 5%;
+    border-style: solid;
+    margin-top: 1rem;
+  }
+
+  p {
+    display: inline-block;
+  }
