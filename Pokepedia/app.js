@@ -53,12 +53,20 @@ app.post("/pokemon", function (req, res) {
         pokemonResponse.on("end", () => {
             pokeData = JSON.parse(pokeData);
             var name = pokeData.name;
-            const id = pokeData.id;
+            var id = pokeData.id;
             const types = pokeData.types;
 
+            if(id < 10)
+            {
+                id = "00" + id;
+            }
+            else if(id > 10 && id < 100)
+            {
+                id = "0" + id;
+            }
 
-            const imageSprite = pokeData.sprites.front_default;
 
+            const imageSprite = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + id + ".png";
 
             name = name.charAt(0).toUpperCase() + name.slice(1);
 
