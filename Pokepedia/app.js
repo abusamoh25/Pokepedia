@@ -55,6 +55,7 @@ app.post("/pokemon", function (req, res) {
             var name = pokeData.name;
             var id = pokeData.id;
             const types = pokeData.types;
+            const move = pokeData.moves;
 
             if(id < 10)
             {
@@ -70,7 +71,7 @@ app.post("/pokemon", function (req, res) {
 
             name = name.charAt(0).toUpperCase() + name.slice(1);
 
-            res.render("pokemon.ejs",{name: name, id: id, imageSprite: imageSprite, types: types})
+            res.render("pokemon.ejs",{name: name, id: id, imageSprite: imageSprite, types: types, move: move})
         });
 
 

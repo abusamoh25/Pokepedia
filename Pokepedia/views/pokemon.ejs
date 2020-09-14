@@ -1,16 +1,24 @@
 <%- include("partials/header.ejs") %>
 
 <%- include("partials/search-nav.ejs") %>
-<h1 class="text-center">Pokemon #<%=id %> </h1>
-<h2 class="text-center"><%=name %> </h2>
-<div class="row flex-column align-content-center">
-    <img src="<%=imageSprite%>"> 
-</div>
+<div class="container-fluid"> 
+    <h1 class="text-center">Pokemon #<%=id %> </h1>
+    <h2 class="text-center"><%=name %> </h2>
+    <div class="row flex-column align-content-center">
+        <img src="<%=imageSprite%>"> 
+    </div>
 
-<div class="row flex-column align-content-center">
-    <div class="col-lg-12 d-flex justify-content-center">
-        <%types.forEach(function (obj) {%>
-          <p class="text-center <%=obj.type.name%> type mx-2"><%=obj.type.name%> </p>
+    <div class="row flex-column align-content-center">
+        <div class="col-sm-12 d-flex justify-content-center">
+            <%types.forEach(function (obj) {%>
+            <span class="text-center <%=obj.type.name%> type mx-2"><%=obj.type.name%> </span>
+            <%})%>
+        </div>
+    </div>
+
+    <div class="move">
+        <%move.forEach(function (obj) {%>
+            <p class="text-center mx-2 move"><%=obj.move.name%></p>
         <%})%>
     </div>
 </div>
