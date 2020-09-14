@@ -16,4 +16,7 @@ body {
     float: right;
     border-style: dotted;
   }
-  
+
+  .electric{
+    background: yellow;
+  }
