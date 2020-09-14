@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <section class="colored-section" id="title">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="">Poképedia <img class="poke" src="https://www.flaticon.com/svg/static/icons/svg/287/287221.svg" alt="Pokeball" class="replaced-svg"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <form action="/pokemon" class="form-inline ml-auto" method="post">
+                    <div class="md-form my-0">
+                        <input class="form-control" type="text" placeholder="Pokemon Name" aria-label="Search" name="pokeName">
+                    </div>
+                    <button href="#!" id="submitButton" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search</button>
+                    </form>
+            </nav>
+        </div>
+    </section>
+
+    <section class="colored-section" id="content">
+        <div class="container-fluid">
+            <form action="/pokemon" class="mr-auto srch" method="post">
+                <input class="form-control mr-sm-2" id="sbm" type="text" placeholder="Search" aria-label="Search" name="pokeName">
+                <button class="btn btn-unique btn-rounded btn-sm my-0 srch-btn" type="submit">Search</button>
+              </form>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

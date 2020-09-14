@@ -1,0 +1,30 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dom": "0.0.3",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "https": "^1.0.0",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.4.0",
+    "mongoose": "^5.10.5",
+    "node-fetch": "^2.6.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "pokemon-images": "^2.0.1",
+    "pokesprite-images": "^2.2.5",
+    "request": "^2.88.2"
+  }
+}

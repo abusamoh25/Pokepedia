@@ -1,0 +1,19 @@
+.poke {
+    width: 30%;
+  }
+body {
+    background-color: #fe7171;
+  }
+
+.srch {
+    padding-top: 15%;
+    /* width: 5rem; */
+    max-width: 50rem;
+    margin-left: 35rem;
+  }
+
+  .srch-btn {
+    float: right;
+    border-style: dotted;
+  }
+  
