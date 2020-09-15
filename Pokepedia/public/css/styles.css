@@ -1,11 +1,28 @@
 .poke {
   width: 30%;
 }
+
+.pokeball {
+  width: 8%;
+  float: left;
+  /* margin-right: 1rem; */
+  margin-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   /* background-color: #fe7171; */
   background-image: linear-gradient(90deg, rgb(250, 160, 160),#fe7171);
   /* background-color: rgba(255, 255, 255, 0.25); */
   
+}
+
+.brand {
+  margin-left: 1rem;
 }
 
 .srch {
@@ -17,7 +34,7 @@ body {
 
 .srch-btn {
   float: right;
-  border-style: dotted;
+  /* border-style: dotted; */
 }
 
 .normal {
@@ -117,11 +134,11 @@ body {
 }
 
 .name {
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
 }
 
 .tbl {
-  width: 30rem;
+  width: 25rem;
   border-style: solid;
   border-width: 1px;
 }
