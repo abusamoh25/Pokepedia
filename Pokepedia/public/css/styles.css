@@ -18,6 +18,7 @@ body {
   /* background-color: #fe7171; */
   background-image: linear-gradient(90deg, rgb(250, 160, 160),#fe7171);
   /* background-color: rgba(255, 255, 255, 0.25); */
+  color: #fff;
   
 }
 
@@ -114,6 +115,7 @@ body {
   width: 8rem;
   border-style: solid;
   margin-top: 1rem;
+  border-color: #000;
 }
 
 .move {
