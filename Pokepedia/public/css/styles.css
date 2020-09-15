@@ -1,12 +1,12 @@
 .poke {
-  width: 30%;
+  width: 3rem;
 }
 
 .pokeball {
-  width: 8%;
+  width: 3rem;
   float: left;
   /* margin-right: 1rem; */
-  margin-bottom: 2rem;
+  padding-top: 1.4rem;
 }
 
 .title {
@@ -29,7 +29,7 @@ body {
 
 .brand {
   margin-left: 1rem;
-  padding-top: 1.4rem;
+  margin-top: 1.4rem;
 }
 
 .srch {
@@ -156,12 +156,8 @@ body {
 }
 
 .img {
-  position: absolute;
-  z-index: -1;
-  width: 20rem;
-  height: auto;
-  opacity: 60%;
-  margin-top: 25%;
+  width: 15rem;
+
 }
 
 .img-container {
