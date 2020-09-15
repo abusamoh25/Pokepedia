@@ -14,6 +14,11 @@
   justify-content: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   /* background-color: #fe7171; */
   background-image: linear-gradient(90deg, rgb(250, 160, 160),#fe7171);
@@ -29,8 +34,7 @@ body {
 .srch {
   padding-top: 15%;
   /* width: 5rem; */
-  max-width: 50rem;
-  margin-left: 35rem;
+  /* margin-left: 35rem; */
 }
 
 .srch-btn {
