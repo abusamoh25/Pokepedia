@@ -40,40 +40,49 @@ app.get("/", function (req, res) {
 app.post("/pokemon", function (req, res) {
     console.log(req.body)
     const url = "https://pokeapi.co/api/v2/pokemon/" + req.body.pokeName;
+    const fail = "Pokémon not found, please try a valid Pokémon ID or Name.";
 
     https.get(url, function (pokemonResponse) {
-        let pokeData = "";
-        pokemonResponse.setEncoding("utf8");
-        console.log(pokemonResponse.statusCode);
 
-        pokemonResponse.on("data", (data) => {
-            pokeData += data;
-        })
+       if ( pokemonResponse.statusCode !== 200) {
+            res.render("failure.ejs", {fail: fail})
+        }
+        else {
 
-        pokemonResponse.on("end", () => {
-            pokeData = JSON.parse(pokeData);
-            var name = pokeData.name;
-            var id = pokeData.id;
-            const types = pokeData.types;
-            const move = pokeData.moves;
+        
 
-            if(id < 10)
-            {
-                id = "00" + id;
-            }
-            else if(id > 10 && id < 100)
-            {
-                id = "0" + id;
-            }
+            let pokeData = "";
+            pokemonResponse.setEncoding("utf8");
+            console.log(pokemonResponse.statusCode);
+
+            pokemonResponse.on("data", (data) => {
+                pokeData += data;
+            })
+
+            pokemonResponse.on("end", () => {
+                pokeData = JSON.parse(pokeData);
+                var name = pokeData.name;
+                var id = pokeData.id;
+                const types = pokeData.types;
+                const move = pokeData.moves;
+
+                if(id < 10)
+                {
+                    id = "00" + id;
+                }
+                else if(id > 10 && id < 100)
+                {
+                    id = "0" + id;
+                }
 
 
-            const imageSprite = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + id + ".png";
+                const imageSprite = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + id + ".png";
 
-            name = name.charAt(0).toUpperCase() + name.slice(1);
+                name = name.charAt(0).toUpperCase() + name.slice(1);
 
-            res.render("pokemon.ejs",{name: name, id: id, imageSprite: imageSprite, types: types, move: move})
-        });
-
+                res.render("pokemon.ejs",{name: name, id: id, imageSprite: imageSprite, types: types, move: move})
+            });
+        }
 
     })
 
