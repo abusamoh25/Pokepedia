@@ -1,6 +1,8 @@
 <%- include("partials/header.ejs") %>
 
 <%- include("partials/search-nav.ejs") %>
+<%- include("partials/logo.ejs") %>
+
 <div class="container-fluid"> 
     <h1 class="text-center">Pokemon #<%=id %> </h1>
     <h2 class="text-center"><%=name %> </h2>
@@ -9,18 +11,41 @@
     </div>
 
     <div class="row flex-column align-content-center">
-        <div class="col-sm-12 d-flex justify-content-center">
+        <div class="col-sm-12 d-flex justify-content-center name">
             <%types.forEach(function (obj) {%>
             <span class="text-center <%=obj.type.name%> type mx-2"><%=obj.type.name%> </span>
             <%})%>
         </div>
     </div>
 
-    <div class="move">
+    <!-- <div class="move move-grid">
         <%move.forEach(function (obj) {%>
             <p class="text-center mx-2 move"><%=obj.move.name%></p>
         <%})%>
-    </div>
+    </div> -->
 </div>
-
+<div class="move-table">
+  <table class="table table-sm tbl">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Level - Method</th>
+        <th scope="col">Move Name</th>
+      </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr>
+        <th class="" scope="row">
+            <%move.forEach(function (obj) {%>
+            <p class="move"><%=obj.version_group_details[0].level_learned_at%> - <%=obj.version_group_details[0].move_learn_method.name%></p>
+            <%})%>
+        </th>
+        <td class="table-data">
+            <%move.forEach(function (obj) {%>
+                <p class="move"><%=obj.move.name%></p>
+            <%})%>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <%- include("partials/footer.ejs") %>
