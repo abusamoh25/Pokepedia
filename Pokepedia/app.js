@@ -22,6 +22,19 @@ app.get("/", function (req, res) {
 
     res.render("home.ejs");
 
+
+
+    //document.write(pokedex.id(1).get());
+
+    //const pokeData = JSON.parse(pokedex);
+
+    // for(var i = 1; i <= 893; i++)
+    // {
+    //     var name =  pokedex.id(i).get();
+    //     //name = name.name;
+    //     console.log(name + "\n");
+    // }
+
 });
 
 app.post("/pokemon", function (req, res) {
