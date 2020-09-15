@@ -5,12 +5,13 @@
 <div class="container-fluid"> 
     <h1 class="text-center">Pokemon #<%=id %> </h1>
     <h2 class="text-center"><%=name %> </h2>
-    <div class="row flex-column align-content-center">
-        <img class="img" src="<%=imageSprite%>"> 
-    </div>
+
 
     <div class="row flex-column align-content-center">
-        <div class="col-sm-12 d-flex justify-content-center name">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <img class="img" src="<%=imageSprite%>"> 
+        </div>
+        <div class="col-lg-12 d-flex justify-content-center name"> 
             <%types.forEach(function (obj) {%>
             <span class="text-center <%=obj.type.name%> type mx-2"><%=obj.type.name%> </span>
             <%})%>
