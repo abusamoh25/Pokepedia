@@ -39,7 +39,8 @@ app.get("/", function (req, res) {
 
 app.post("/pokemon", function (req, res) {
     console.log(req.body)
-    const url = "https://pokeapi.co/api/v2/pokemon/" + req.body.pokeName;
+    const pokemName = req.body.pokeName.charAt(0).toUpperCase() + req.body.pokeName.slice(1);
+    const url = "https://pokeapi.co/api/v2/pokemon/" + pokemName;
     const fail = "Pokémon not found, please try a valid Pokémon ID or Name.";
 
     https.get(url, function (pokemonResponse) {
